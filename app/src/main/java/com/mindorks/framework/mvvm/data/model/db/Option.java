@@ -47,6 +47,7 @@ public class Option {
 
     @Expose
     @SerializedName("is_correct")
+
     @ColumnInfo(name = "is_correct")
     public boolean isCorrect;
 
