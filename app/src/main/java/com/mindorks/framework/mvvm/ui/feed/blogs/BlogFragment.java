@@ -22,6 +22,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.View;
 import com.mindorks.framework.mvvm.BR;
 import com.mindorks.framework.mvvm.R;
@@ -101,7 +103,7 @@ public class BlogFragment extends BaseFragment<FragmentBlogBinding, BlogViewMode
     }
 
     private void setUp() {
-        mLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        mLayoutManager.setOrientation(RecyclerView.VERTICAL);
         mFragmentBlogBinding.blogRecyclerView.setLayoutManager(mLayoutManager);
         mFragmentBlogBinding.blogRecyclerView.setItemAnimator(new DefaultItemAnimator());
         mFragmentBlogBinding.blogRecyclerView.setAdapter(mBlogAdapter);
