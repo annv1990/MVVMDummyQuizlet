@@ -45,6 +45,7 @@ import com.mindorks.framework.mvvm.ui.base.BaseActivity;
 import com.mindorks.framework.mvvm.ui.feed.FeedActivity;
 import com.mindorks.framework.mvvm.ui.login.LoginActivity;
 import com.mindorks.framework.mvvm.ui.main.rating.RateUsDialog;
+import com.mindorks.framework.mvvm.ui.stackoverfollow.StackOverFollowActivity;
 import com.mindorks.framework.mvvm.utils.ScreenUtils;
 import com.mindorks.placeholderview.SwipeDecor;
 import com.mindorks.placeholderview.SwipePlaceHolderView;
@@ -257,6 +258,9 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
                             return true;
                         case R.id.navItemFeed:
                             startActivity(FeedActivity.newIntent(MainActivity.this));
+                            return true;
+                        case R.id.navItemStackOver:
+                            startActivity(StackOverFollowActivity.newIntent(MainActivity.this));
                             return true;
                         case R.id.navItemLogout:
                             mMainViewModel.logout();

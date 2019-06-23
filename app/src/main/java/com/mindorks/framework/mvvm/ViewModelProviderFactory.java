@@ -12,6 +12,7 @@ import com.mindorks.framework.mvvm.ui.login.LoginViewModel;
 import com.mindorks.framework.mvvm.ui.main.MainViewModel;
 import com.mindorks.framework.mvvm.ui.main.rating.RateUsViewModel;
 import com.mindorks.framework.mvvm.ui.splash.SplashViewModel;
+import com.mindorks.framework.mvvm.ui.stackoverfollow.StackOverFollowViewModel;
 import com.mindorks.framework.mvvm.utils.rx.SchedulerProvider;
 
 import javax.inject.Inject;
@@ -68,7 +69,13 @@ public class ViewModelProviderFactory extends ViewModelProvider.NewInstanceFacto
             //noinspection unchecked
             return (T) new SplashViewModel(dataManager, schedulerProvider);
 
+        }else if (modelClass.isAssignableFrom(StackOverFollowViewModel.class)) {
+            //noinspection unchecked
+            return (T) new StackOverFollowViewModel(dataManager, schedulerProvider);
+
         }
+
+
         throw new IllegalArgumentException("Unknown ViewModel class: " + modelClass.getName());
     }
 }

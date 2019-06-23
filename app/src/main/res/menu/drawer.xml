@@ -30,6 +30,12 @@
             android:checked="true"
             android:icon="@drawable/ic_rss_symbol"
             android:title="@string/feed" />
+
+        <item
+            android:id="@+id/navItemStackOver"
+            android:checked="true"
+            android:icon="@drawable/ic_rss_symbol"
+            android:title="@string/stack_over" />
         <item
             android:id="@+id/navItemLogout"
             android:checked="true"

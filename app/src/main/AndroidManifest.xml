@@ -47,6 +47,11 @@
             android:launchMode="singleTop" />
 
         <activity
+            android:name=".ui.stackoverfollow.StackOverFollowActivity"
+            android:launchMode="singleTop" />
+
+
+        <activity
             android:name="com.mindorks.framework.mvvm.ui.feed.FeedActivity"
             android:launchMode="singleTop"
             android:parentActivityName=".ui.main.MainActivity">
