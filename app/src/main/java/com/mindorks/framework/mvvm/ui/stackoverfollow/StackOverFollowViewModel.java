@@ -11,4 +11,9 @@ public class StackOverFollowViewModel extends BaseViewModel {
         super(dataManager, schedulerProvider);
     }
 
+    public void fetchStackOverAnswers(String order, String sort, String site){
+        setIsLoading(true);
+
+    }
+
 }

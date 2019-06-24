@@ -21,6 +21,8 @@ import com.mindorks.framework.mvvm.data.model.api.LoginRequest;
 import com.mindorks.framework.mvvm.data.model.api.LoginResponse;
 import com.mindorks.framework.mvvm.data.model.api.LogoutResponse;
 import com.mindorks.framework.mvvm.data.model.api.OpenSourceResponse;
+import com.mindorks.framework.mvvm.data.model.api.response.stackover.StackOverAnswersResponse;
+
 import io.reactivex.Single;
 
 /**
@@ -42,4 +44,6 @@ public interface ApiHelper {
     Single<BlogResponse> getBlogApiCall();
 
     Single<OpenSourceResponse> getOpenSourceApiCall();
+
+    Single<StackOverAnswersResponse> fetchStackOverAnswers();
 }

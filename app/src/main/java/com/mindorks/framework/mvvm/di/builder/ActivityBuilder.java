@@ -26,7 +26,6 @@ import com.mindorks.framework.mvvm.ui.main.MainActivity;
 import com.mindorks.framework.mvvm.ui.main.rating.RateUsDialogProvider;
 import com.mindorks.framework.mvvm.ui.splash.SplashActivity;
 import com.mindorks.framework.mvvm.ui.stackoverfollow.StackOverFollowActivity;
-import com.mindorks.framework.mvvm.ui.stackoverfollow.StackOverFollowViewModel;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;

@@ -33,6 +33,7 @@ import com.mindorks.framework.mvvm.data.local.prefs.PreferencesHelper;
 import com.mindorks.framework.mvvm.data.remote.ApiHeader;
 import com.mindorks.framework.mvvm.data.remote.ApiHelper;
 import com.mindorks.framework.mvvm.data.remote.AppApiHelper;
+import com.mindorks.framework.mvvm.data.remote.RetrofitService;
 import com.mindorks.framework.mvvm.di.ApiInfo;
 import com.mindorks.framework.mvvm.di.DatabaseInfo;
 import com.mindorks.framework.mvvm.di.PreferenceInfo;
@@ -133,6 +134,12 @@ public class AppModule {
     @Provides
     SchedulerProvider provideSchedulerProvider() {
         return new AppSchedulerProvider();
+    }
+
+    @Provides
+    @Singleton
+    RetrofitService provideRetrofitService(RetrofitService retrofitService) {
+        return retrofitService;
     }
 
 }

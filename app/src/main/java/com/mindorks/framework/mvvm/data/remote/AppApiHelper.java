@@ -21,6 +21,7 @@ import com.mindorks.framework.mvvm.data.model.api.LoginRequest;
 import com.mindorks.framework.mvvm.data.model.api.LoginResponse;
 import com.mindorks.framework.mvvm.data.model.api.LogoutResponse;
 import com.mindorks.framework.mvvm.data.model.api.OpenSourceResponse;
+import com.mindorks.framework.mvvm.data.model.api.response.stackover.StackOverAnswersResponse;
 import com.rx2androidnetworking.Rx2AndroidNetworking;
 import io.reactivex.Single;
 import javax.inject.Inject;
@@ -94,5 +95,10 @@ public class AppApiHelper implements ApiHelper {
                 .addHeaders(mApiHeader.getProtectedApiHeader())
                 .build()
                 .getObjectSingle(OpenSourceResponse.class);
+    }
+
+    @Override
+    public Single<StackOverAnswersResponse> fetchStackOverAnswers() {
+        return null;
     }
 }
