@@ -29,10 +29,13 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+
+import com.crashlytics.android.Crashlytics;
 import com.mindorks.framework.mvvm.ui.login.LoginActivity;
 import com.mindorks.framework.mvvm.utils.CommonUtils;
 import com.mindorks.framework.mvvm.utils.NetworkUtils;
 import dagger.android.AndroidInjection;
+import io.fabric.sdk.android.Fabric;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 /**
@@ -90,6 +93,7 @@ public abstract class BaseActivity<T extends ViewDataBinding, V extends BaseView
         performDependencyInjection();
         super.onCreate(savedInstanceState);
         performDataBinding();
+        Fabric.with(this, new Crashlytics());
     }
 
     public T getViewDataBinding() {

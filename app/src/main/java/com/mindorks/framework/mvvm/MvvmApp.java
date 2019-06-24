@@ -18,16 +18,18 @@ package com.mindorks.framework.mvvm;
 
 import android.app.Activity;
 import android.app.Application;
+
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.interceptors.HttpLoggingInterceptor;
 import com.crashlytics.android.Crashlytics;
-import com.crashlytics.android.ndk.CrashlyticsNdk;
 import com.mindorks.framework.mvvm.di.component.DaggerAppComponent;
 import com.mindorks.framework.mvvm.utils.AppLogger;
+
+import javax.inject.Inject;
+
 import dagger.android.DispatchingAndroidInjector;
 import dagger.android.HasActivityInjector;
 import io.fabric.sdk.android.Fabric;
-import javax.inject.Inject;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 /**
@@ -50,7 +52,7 @@ public class MvvmApp extends Application implements HasActivityInjector {
     @Override
     public void onCreate() {
         super.onCreate();
-        Fabric.with(this, new Crashlytics(), new CrashlyticsNdk());
+        Fabric.with(this, new Crashlytics(), new Crashlytics());
 
         DaggerAppComponent.builder()
                 .application(this)
