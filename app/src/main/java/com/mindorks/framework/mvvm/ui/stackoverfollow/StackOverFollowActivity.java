@@ -35,6 +35,7 @@ public class StackOverFollowActivity extends BaseActivity<ActivityStackoverBindi
         super.onCreate(savedInstanceState);
         mBinding = getViewDataBinding();
         mModel.setNavigator(this);
+        mModel.fetchStackOverAnswers("desc", "activity", "stackoverflow");
     }
 
     @Override

@@ -23,7 +23,9 @@ import com.mindorks.framework.mvvm.data.model.api.LogoutResponse;
 import com.mindorks.framework.mvvm.data.model.api.OpenSourceResponse;
 import com.mindorks.framework.mvvm.data.model.api.response.stackover.StackOverAnswersResponse;
 import com.rx2androidnetworking.Rx2AndroidNetworking;
+
 import io.reactivex.Single;
+
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
@@ -35,6 +37,7 @@ import javax.inject.Singleton;
 public class AppApiHelper implements ApiHelper {
 
     private ApiHeader mApiHeader;
+
 
     @Inject
     public AppApiHelper(ApiHeader apiHeader) {
@@ -98,7 +101,7 @@ public class AppApiHelper implements ApiHelper {
     }
 
     @Override
-    public Single<StackOverAnswersResponse> fetchStackOverAnswers() {
-        return null;
+    public Single<StackOverAnswersResponse> fetchStackOverAnswers(String order, String sort, String site) {
+        return RetrofitService.createService(StackOverApi.class).getAnswers(order, sort, site);
     }
 }

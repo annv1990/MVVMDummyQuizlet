@@ -129,6 +129,9 @@ dependencies {
 
     implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofit2Version"
     implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofit2Version"
+    implementation "com.squareup.retrofit2:converter-scalars:$rootProject.retrofit2Version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$rootProject.retrofit2Version"
+
     implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
     implementation 'com.crashlytics.sdk.android:crashlytics-ndk:2.1.0'
 }

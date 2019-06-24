@@ -45,5 +45,5 @@ public interface ApiHelper {
 
     Single<OpenSourceResponse> getOpenSourceApiCall();
 
-    Single<StackOverAnswersResponse> fetchStackOverAnswers();
+    Single<StackOverAnswersResponse> fetchStackOverAnswers(String order, String sort, String site);
 }

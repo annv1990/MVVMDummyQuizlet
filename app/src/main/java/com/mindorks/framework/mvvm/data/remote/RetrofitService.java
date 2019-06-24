@@ -1,29 +1,23 @@
 package com.mindorks.framework.mvvm.data.remote;
 
-import javax.inject.Inject;
-import javax.inject.Singleton;
-
 import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-@Singleton
-public class RetrofitService<S> {
 
-    RetrofitService mRetrofitService;
+public class RetrofitService {
 
-    @Inject
-    public RetrofitService(RetrofitService service) {
-        mRetrofitService = service;
-    }
-
-    private Retrofit retrofit = new Retrofit.Builder()
+    private static Retrofit retrofit = new Retrofit.Builder()
             .baseUrl("https://api.stackexchange.com/2.2/")
             .addConverterFactory(GsonConverterFactory.create())
+            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .build();
 
 
-    public S createService(Class<S> serviceClass) {
+    public static <S> S createService(Class<S> serviceClass) {
         return retrofit.create(serviceClass);
     }
+
+
 
 }
