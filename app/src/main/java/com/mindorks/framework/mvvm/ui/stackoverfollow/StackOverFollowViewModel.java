@@ -23,12 +23,12 @@ public class StackOverFollowViewModel extends BaseViewModel {
         .observeOn(getSchedulerProvider().ui())
         .subscribe(response -> {
             setIsLoading(false);
-            Log.d(Constants.TAG, "fetchStackOverAnswers OK " + response.getItems().size());
-//            AppLogger.d(Constants.TAG, "fetchStackOverAnswers OK");
+//            Log.d(Constants.TAG, "fetchStackOverAnswers OK " + response.getItems().size());
+            AppLogger.d(Constants.TAG, "fetchStackOverAnswers OK");
         }, throwable -> {
             setIsLoading(false);
-            Log.d(Constants.TAG, "fetchStackOverAnswers FAIL");
-//            AppLogger.d(Constants.TAG, "fetchStackOverAnswers FAIL");
+//            Log.d(Constants.TAG, "fetchStackOverAnswers FAIL");
+            AppLogger.d(Constants.TAG, "fetchStackOverAnswers FAIL");
         }));
 
     }
